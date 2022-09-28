@@ -13,7 +13,7 @@ until (exec 3<>/dev/tcp/127.0.0.1/7687) &>/dev/null; do
   sleep 1s
 done
 
-neo4j-migrations-1.13.0/bin/neo4j-migrations --password=secret run --migration=file:///var/lib/neo4j/V1__replaceBTreeIndexes.xml 
+neo4j-migrations-1.13.0/bin/neo4j-migrations --password=secret run --migration=file:///var/lib/neo4j/V1__replaceBTreeIndexes.xml>/dev/null 
 
 neo4j stop &>/dev/null
 neo4j-admin dump --to=new_dump &>/dev/null
