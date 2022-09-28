@@ -13,9 +13,7 @@ until (exec 3<>/dev/tcp/127.0.0.1/7687) &>/dev/null; do
   sleep 1s
 done
 
-echo '<?xml version="1.0" encoding="UTF-8"?><migration xmlns="https://michael-simons.github.io/neo4j-migrations"><refactor type="migrate.replaceBTreeIndexes" /></migration>' > neo4j-migrations-1.13.0/bin/V1__to50.xml
-
-neo4j-migrations-1.13.0/bin/neo4j-migrations --password=secret --location=file:///var/lib/neo4j/neo4j-migrations-1.13.0/bin apply &>/dev/null
+./bin/neo4j-migrations --password=secret run --migration=file:///var/lib/neo4j/V1__replaceBTreeIndexes.xml &>/dev/null
 
 neo4j stop &>/dev/null
 neo4j-admin dump --to=new_dump &>/dev/null
