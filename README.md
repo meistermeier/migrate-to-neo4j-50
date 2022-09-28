@@ -34,3 +34,7 @@ These steps:
 
 Read more about _neo4j-admin_ and [Offline Backup](https://neo4j.com/docs/operations-manual/current/backup-restore/offline-backup/),
 read more about _neo4j-migrations_ [here](https://github.com/michael-simons/neo4j-migrations).
+
+## Enterprise edition
+If you need to, you can use the enterprise edition of Neo4j by providing `--build-arg EDITION="-enterprise"` during the image build.
+By doing this, you accept the licencing of Neo4j enterprise edition.

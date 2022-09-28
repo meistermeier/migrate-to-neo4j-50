@@ -1,4 +1,5 @@
-from neo4j:4.4
+ARG EDITION
+from neo4j:4.4$EDITION
 
 RUN apt update && apt install -y unzip
 # Yes, this could be parameterized, but never change a running version ;)
