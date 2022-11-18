@@ -5,8 +5,15 @@ The _BTREE_ index type cannot get migrated to 5.0 on-the-fly.
 This image and most of all the new support of migrating indexes in [Neo4j-Migrations](https://michael-simons.github.io/neo4j-migrations/current/) provides a one-liner to migrate your dumps from _BTREE_ to _RANGE_ indexes.
 
 ## Disclaimer
+:warning: :warning: :warning: :warning: :warning:
+
 The tool will convert **all** _BTREE_ indexes to _RANGE_ type.
-It does not check if this is _POINT_ or other type of index.
+It does not check if this is a _POINT_ or other type of index.
+:underage: You might only use it if you know what you are doing.
+:open_hands: This is for your from the community for the community.
+I am happy to get your input if this helps you (or you have questions). But this Dockerfile is completely unofficial and unrelated to Neo4j.
+
+:warning: :warning: :warning: :warning: :warning:
 
 ## Usage
 From your Neo4j installation directory:
